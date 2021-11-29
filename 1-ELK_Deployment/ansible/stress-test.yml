@@ -1,0 +1,27 @@
+---
+
+- name: Stress Web VMs
+  hosts: webservers
+  become: yes
+
+  vars_prompt: # this prompt asks for how long to stress the VMs
+  - name: "time"
+    prompt: "Enter stress time length in minutes"
+    private: no
+
+  tasks:
+
+    - name: install stress with apt
+      apt:
+        update_cache: true
+        name: stress
+        state: present
+
+    - name: run the stress command
+      command: stress --cpu 1 --timeout '{{ time }}'m
+      register: output
+      async: 1000
+      poll: 10
+
+    - debug:
+        var: output.stdout_lines

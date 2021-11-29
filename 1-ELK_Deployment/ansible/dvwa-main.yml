@@ -1,0 +1,11 @@
+---
+
+- hosts: webservers
+  become: true
+  roles:
+  
+    - role: docker
+      tags: docker
+
+    - role: dvwa
+      tags: dvwa

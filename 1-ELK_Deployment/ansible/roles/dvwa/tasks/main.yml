@@ -1,0 +1,9 @@
+---
+
+- name: download and lunch dvwa docker container
+  docker_container:
+    name: dvwa
+    image: cyberxsecurity/dvwa
+    state: started
+    restart_policy: always
+    published_ports: 80:80

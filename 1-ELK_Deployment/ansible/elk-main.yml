@@ -1,0 +1,23 @@
+---
+
+- name: install elk stack
+  hosts: elk
+  become: true
+  roles:
+
+    - role: docker
+      tags: docker
+  
+    - role: elk
+      tags: elk
+
+- name: install filebeat and metricbeat
+  hosts: webservers
+  become: true
+  roles:
+   
+    - role: filebeat
+      tags: filebeat
+    
+    - role: metricbeat
+      tags: metricbeat
