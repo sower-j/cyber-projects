@@ -1,0 +1,16 @@
+---
+
+- name: update wordpress
+
+  hosts: target1,target2 # connect to Target1 and Target2
+
+  become: true # preform the following actions as root
+
+  apt: # this module uses the package manager "apt" available on debian and ubuntu distributions
+
+    update_cache: yes # preforms "apt update"
+
+    name: wordpress # name of package to be affected
+
+    state: latest # preforms "apt update wordpress"
+
