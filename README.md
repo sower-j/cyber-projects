@@ -14,6 +14,10 @@ The goal of the Red team was to exfiltrate data (capture flags) on a target mach
 
 A small team was given a copy of a suspects Iphone hard drive. Together the group used Autopsy to gather evidence and extract data relevant to the subjects involvement in an art heist. This required the use of other tools such as SQLite Browser to explore databases contained on the Iphone. Other stenography tools to find messages hidden in images and audio files. Finally this project required a small amount of group management skills to ensure each group member had tasks to do that fit their skill set and someone to ensure all data was combined properly.
 
-## Network Monitoring
+## [Final Project](./4-Final_Project/)
 
-still in progress! this will be updated with the project is complete and turned in
+This project is a showcase of all the skills learned throughout the bootcamp. The first part of this project was done individually and then a presentation was developed as a group and presented to the class. 
+
+The first individual section focused on [defense](./4-Final_Project/Defense.md). In this section I defined the network and set some alerts in the network's ELK stack. Next was [offense](./4-Final_Project/Offense.md) where I attacked a wordpress server to collect flags and potentially trigger the alerts set in the defensive portion of the project to verify they worked properly. Finally the [network](./4-Final_Project/Network.md) portion of the project focused on the utilization of Wireshark to analyze network traffic and find illegal and malicious file downloads.
+
+As a group we chose to present on the defensive section of the project. The pdf version of the group presentation can be seen [here](./4-Final_Project/Sowers-Defensive_Final_Project_Presentation.pdf)
